@@ -24,6 +24,7 @@ def user(name):
 
 
 # 유효하지 않은 페이지 정의
+# 아무 앤드포인트를 주소창에 적을 경우 : 404, 500 error
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
