@@ -1,0 +1,17 @@
+<!-- jinja 호출 및 대문자 만들기  -->
+   <!-- capitalize) 첫글자만 대문자 -->
+<h1>hello {{name|capitalize}}</h1>
+   <!-- safe) jinja 태그 적용해서 넘겨줌 (없을 경우 태그 그대로 출력하므로) -->
+<h2>{{test|safe}}</h2> 
+   <!-- striptags) 태그 적용안되게 넘겨줌 -->
+<h2>{{test|striptags}}</h2> 
+<h3>{% for i in favorite %}
+        {% if i == "pizza" %}
+            {{ i + ":potato"}}
+        {% else %}
+            {{  i }}
+        {% endif %}
+    {% endfor %}
+</h3>
+
+{{favorite[0]}}
